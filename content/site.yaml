@@ -1,0 +1,8 @@
+name: "Mohammed Hammoudeh"
+title: "AI Consultant"
+tagline: "Voice → Transcribe → Website Update"
+email: "mfh@njit.edu"
+
+updates:
+  - date: "2026-03-05"
+    text: "Initialized Voice-to-Website proof of concept."

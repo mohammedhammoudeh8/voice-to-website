@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Recorder</title>
+  <style>
+    body{font-family:system-ui;margin:0;background:#0b0f14;color:#eaf0ff}
+    .wrap{max-width:720px;margin:0 auto;padding:24px}
+    .card{background:#121a24;border:1px solid #223044;border-radius:16px;padding:18px;margin:14px 0}
+    button,input{font-size:16px;padding:10px 12px;border-radius:10px;border:1px solid #223044;background:#162235;color:#eaf0ff}
+    button{cursor:pointer}
+    code{background:#0d141d;border:1px solid #223044;padding:2px 6px;border-radius:8px}
+    .row{display:flex;gap:10px;flex-wrap:wrap}
+    a{color:#7cc0ff}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="card">
+      <h1>Audio Recorder → Website Update</h1>
+      <p>Records audio and uploads it into the repo under <code>inbox/</code>. A GitHub Action will transcribe and update the site.</p>
+      <p><a href="../">Back to site</a></p>
+    </div>
+
+    <div class="card">
+      <h2>1) GitHub Token</h2>
+      <p>Create a fine-grained PAT with access to this repo (Permissions: <b>Contents: Read/Write</b>). Paste it here (saved in <code>localStorage</code> in your browser):</p>
+      <input id="token" type="password" placeholder="github_pat_..." style="width:100%" />
+      <div style="height:10px"></div>
+      <div class="row">
+        <button id="saveToken">Save token</button>
+        <button id="clearToken">Clear token</button>
+      </div>
+      <div id="tokenStatus" style="margin-top:10px;opacity:.85"></div>
+    </div>
+
+    <div class="card">
+      <h2>2) Record</h2>
+      <div class="row">
+        <button id="start">Start</button>
+        <button id="stop" disabled>Stop</button>
+        <button id="upload" disabled>Upload</button>
+      </div>
+      <div style="height:12px"></div>
+      <audio id="player" controls style="width:100%"></audio>
+      <div id="status" style="margin-top:10px;opacity:.85"></div>
+    </div>
+  </div>
+
+  <script src="./recorder.js"></script>
+</body>
+</html>

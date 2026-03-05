@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>{{NAME}} — {{TITLE}}</title>
+  <style>
+    body{font-family:system-ui,Arial;margin:0;background:#0b0f14;color:#eaf0ff}
+    .wrap{max-width:900px;margin:0 auto;padding:28px}
+    .card{background:#121a24;border:1px solid #223044;border-radius:16px;padding:18px;margin:14px 0}
+    a{color:#7cc0ff}
+    code{background:#0d141d;border:1px solid #223044;padding:2px 6px;border-radius:8px}
+    .grid{display:grid;gap:14px;grid-template-columns:1fr}
+    @media(min-width:820px){.grid{grid-template-columns:1fr}}
+    .update{padding:10px 0;border-top:1px solid #223044}
+    .date{opacity:.8;font-size:12px}
+    .pill{display:inline-block;padding:6px 10px;border-radius:999px;border:1px solid #223044;background:#0d141d;margin-right:8px}
+    .muted{opacity:.9}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="card">
+      <div class="pill">GitHub Pages</div><div class="pill">Automation Demo</div>
+      <h1 style="margin:10px 0 6px 0;">{{NAME}}</h1>
+      <div class="muted">{{TITLE}}</div>
+      <div style="margin-top:10px">{{TAGLINE}}</div>
+      <div style="margin-top:10px">Contact: <a href="mailto:{{EMAIL}}">{{EMAIL}}</a></div>
+      <div style="margin-top:10px">
+        <a href="./recorder/">Open Recorder App</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>Latest Updates</h2>
+      <div>{{UPDATES}}</div>
+    </div>
+
+    <div class="card">
+      <h2>How it works</h2>
+      <ol>
+        <li>Record audio on the <a href="./recorder/">Recorder</a> page and upload it into the repo (<code>inbox/</code>).</li>
+        <li>A GitHub Action transcribes the audio and appends an update into <code>content/site.yaml</code>.</li>
+        <li>The site rebuilds into <code>docs/</code> and GitHub Pages serves it.</li>
+      </ol>
+    </div>
+  </div>
+</body>
+</html>

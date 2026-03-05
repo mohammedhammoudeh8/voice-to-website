@@ -1,0 +1,12 @@
+{
+  "name": "voice-to-website",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "transcribe": "node scripts/transcribe.mjs"
+  },
+  "dependencies": {
+    "js-yaml": "^4.1.0"
+  }
+}
