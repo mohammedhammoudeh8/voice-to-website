@@ -1,8 +1,5 @@
-// recorder/recorder.js
-// Uploads audio to your GitHub repo into inbox/
-// Then GitHub Actions transcribes + updates the site automatically.
 
-// ✅ Pre-filled for you:
+
 const OWNER = "mohammedhammoudeh8";
 const REPO = "voice-to-website";
 const BRANCH = "main";
