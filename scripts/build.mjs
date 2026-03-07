@@ -29,7 +29,6 @@ const html = template
 fs.mkdirSync(path.dirname(outPath), { recursive: true });
 fs.writeFileSync(outPath, html, "utf8");
 
-// Copy recorder app into docs so GitHub Pages can serve it (Pages publishes /docs)
 fs.mkdirSync("docs/recorder", { recursive: true });
 fs.copyFileSync("recorder/index.html", "docs/recorder/index.html");
 fs.copyFileSync("recorder/recorder.js", "docs/recorder/recorder.js");
