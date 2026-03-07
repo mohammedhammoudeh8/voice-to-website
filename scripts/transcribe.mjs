@@ -4,7 +4,6 @@ import yaml from "js-yaml";
 
 const OPENAI_API_KEY = process.env.OPENAI_API_KEY;
 
-// If no key is set, do not fail the build; just skip transcription.
 if (!OPENAI_API_KEY) {
   console.log("No OPENAI_API_KEY set. Skipping transcription.");
   process.exit(0);
@@ -40,7 +39,6 @@ for (const f of files) {
     text: `Audio update: ${transcript}`
   });
 
-  // Move processed file so we don't re-transcribe
   fs.renameSync(fullPath, path.join(processedDir, f));
 }
 
